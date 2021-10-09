@@ -5,7 +5,12 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
-  {path:"",
+  {
+    path:'',
+    redirectTo:'login',
+    pathMatch:'full'
+  },
+  {path:"login",
   component:LoginComponent
   },
   {path:"signup",
