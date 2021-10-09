@@ -12,8 +12,8 @@ export class TokenService {
 
   constructor() { }
 
-  handle(toekn:any){
-    this.set(toekn)
+  handle(token:any){
+    this.set(token)
   }
 
   set(token:any){

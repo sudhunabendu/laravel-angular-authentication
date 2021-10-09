@@ -1,8 +1,9 @@
 <nav *ngIf="loggedIn" class="navbar navbar-light bg-light justify-content-between">
     <a href="#" class="navbar-brand">Navbar</a>
     <div>
-      <a href="#" class="navbar-brand" >Login</a>
-      <a href="#" class="navbar-brand" >Profile</a>
+      <a href="#" routerLink="login" class="navbar-brand" *igIf="!loggedIn">Login</a>
+      <a href="#" routerLink="profile" class="navbar-brand" *igIf="loggedIn" >Logout</a>
+      <a href="#" routerLink="login" class="navbar-brand" *igIf="loggedIn" >Profile</a>
     </div>
     
   </nav>
