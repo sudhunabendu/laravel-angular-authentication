@@ -43,6 +43,8 @@ export class LoginComponent implements OnInit {
 
   handleError(error:any){
     this.error = error.error.error;
+    // this.auth.changeAuthStatus(false);
+    // this.router.navigateByUrl('/login');
   }
 
 }

@@ -13,7 +13,7 @@ export class TokenService {
   constructor() { }
 
   handle(token:any){
-    this.set(token)
+    this.set(token);
   }
 
   set(token:any){

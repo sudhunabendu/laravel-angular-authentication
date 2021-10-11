@@ -10,15 +10,15 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class NavbarComponent implements OnInit {
 
-  public loggedIn:boolean= false;
-  constructor(
+  public loggedIn :boolean= false;
+ constructor(
     private auth:AuthService,
     private Token:TokenService,
     private Router:Router
   ) { }
 
   ngOnInit(): void {
-    this.auth.authStatus.subscribe(value=>this.loggedIn = value);
+    this.auth.authStatus.subscribe(value =>this.loggedIn = value);
   }
 
   logout(event:MouseEvent){

@@ -1,9 +1,11 @@
 <nav *ngIf="loggedIn" class="navbar navbar-light bg-light justify-content-between">
-    <a href="#" class="navbar-brand">Navbar</a>
+    <a href="#" class="navbar-brand">Home</a>
     <div>
-      <a href="#" routerLink="login" class="navbar-brand" *igIf="!loggedIn">Login</a>
-      <a href="#" routerLink="profile" class="navbar-brand" *igIf="loggedIn" >Logout</a>
-      <a href="#" routerLink="login" class="navbar-brand" *igIf="loggedIn" >Profile</a>
+      <a href="#" routerLink="login" class="navbar-brand" *ngIf="!loggedIn">Login</a>
+    
+      <a href="#" routerLink="login" class="navbar-brand" *ngIf="loggedIn" >Profile</a>
+
+      <a href="#" (click)="logout($event)" class="navbar-brand" *ngIf="loggedIn" >Logout</a>
     </div>
     
   </nav>
