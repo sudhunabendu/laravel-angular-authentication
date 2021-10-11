@@ -12,6 +12,8 @@ import { AuthService } from './services/auth.service';
 import { TokenService } from './services/token.service';
 import { BeforeloginService } from './services/beforelogin.service';
 import { AfterloginService } from './services/afterlogin.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { AfterloginService } from './services/afterlogin.service';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private auth:AuthService,
     private Token:TokenService,
-    private router:Router
+    private router:Router,
+    private Toaster:ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -37,12 +39,14 @@ export class LoginComponent implements OnInit {
   handleResponse(data:any){
     this.Token.handle(data.access_token);
     this.auth.changeAuthStatus(true);
+    this.Toaster.success("Login Success");
     this.router.navigateByUrl('/profile');
 
   }
 
   handleError(error:any){
     this.error = error.error.error;
+    this.Toaster.error("Something is wrong");
     // this.auth.changeAuthStatus(false);
     // this.router.navigateByUrl('/login');
   }
