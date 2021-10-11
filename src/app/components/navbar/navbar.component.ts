@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 
@@ -14,7 +15,8 @@ export class NavbarComponent implements OnInit {
  constructor(
     private auth:AuthService,
     private Token:TokenService,
-    private Router:Router
+    private Router:Router,
+    private AlertService: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -25,6 +27,7 @@ export class NavbarComponent implements OnInit {
     event.preventDefault();
     this.Token.remove();
     this.auth.changeAuthStatus(false);
+    this.AlertService.warning("Logout Success");
     this.Router.navigateByUrl('/login');
   }
 
