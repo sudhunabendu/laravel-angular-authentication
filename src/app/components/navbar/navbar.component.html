@@ -3,7 +3,7 @@
     <div>
       <a href="#" routerLink="login" class="navbar-brand" *ngIf="!loggedIn">Login</a>
     
-      <a href="#" routerLink="login" class="navbar-brand" *ngIf="loggedIn" >Profile</a>
+      <a href="#" routerLink="profile" class="navbar-brand" *ngIf="loggedIn" >Profile</a>
 
       <a href="#" (click)="logout($event)" class="navbar-brand" *ngIf="loggedIn" >Logout</a>
     </div>
