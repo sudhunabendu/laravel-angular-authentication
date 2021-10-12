@@ -14,6 +14,8 @@ import { BeforeloginService } from './services/beforelogin.service';
 import { AfterloginService } from './services/afterlogin.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -22,7 +24,10 @@ import { ToastrModule } from 'ngx-toastr';
     NavbarComponent,
     LoginComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    SidebarComponent,
+    FooterComponent,
+    // FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,7 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    // LayoutModule,
     ToastrModule.forRoot()
   ],
   providers: [],
